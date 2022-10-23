@@ -87,10 +87,8 @@ getTranslate.addEventListener("click", translate);
 
 //Reset button
 
-const reset = (event) => {
+const getReset = document.getElementById("reset");
+getReset.addEventListener("click", () => {
     getInput.value = "";
     getOutput.value = "";
-};
-
-const getReset = document.getElementById("reset");
-getReset.addEventListener("click", reset);
+});
