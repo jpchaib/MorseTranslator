@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer type="module" src="./script.mjs"></script>
+        <title>Morse Translator</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">Morse Code/English Translator</h1>
+            <p class="header__text">Welcome to my Morse Code Translator. Please select an option to translate. For the Morse Code writing use only the "-" and "." characters to build each letter, please use " " to separate characters and "/" to separate words.</p>
+        </header>
+        <div class="morse-machine">
+            <div class="morse-machine__input">
+                <p>From:</p>
+                <select class="morse-machine__input__select" id="select">
+                    <option disabled selected value>-- select an option --</option>
+                    <option class="morse-machine__input__select__option" value="Morse">Morse Code</option>
+                    <option class="morse-machine__input__select__option" value="English">English</option>
+                    <option class="morse-machine__input__select__option" value="Auto-Detect">Auto-Detect</option>
+                </select>
+                <textarea class="morse-machine__input__text-area" name="input" id="input" cols="40" rows="20"></textarea>
+            </div>
+            <div class="morse-machine__buttons">
+                <button class="morse-machine__buttons__btn" id="translate">Translate -></button>
+                <button class="morse-machine__buttons__btn" id="reset">Reset</button>
+            </div>
+            <div class="morse-machine__output">
+                <p>To:</p>
+                <p class="morse-machine__output__selected" id="selected"></p>
+                <textarea class="morse-machine__output__text-area" name="output" id="output" cols="40" rows="20"></textarea>
+            </div>
+        </div>
+    </body>
+</html>

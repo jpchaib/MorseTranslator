@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    &__text {
+        text-align: center;
+        justify-: center;
+        height: 50px;
+        width: 50%;
+    }
+}
+
+.morse-machine {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: x-large;
+
+    &__input {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+
+        &__select {
+            height: 100%;
+            width: 100%;
+            font-size: large;
+        }
+        &__text-area {
+            resize: none;
+            font-size: x-large;
+            border-radius: 5px;
+            border-color: aqua;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        &__btn {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            font-size: large;
+        }
+    }
+
+    &__output {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+
+        &__selected {
+            padding-left: 2%;
+            width: 98%;
+            height: 25px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            font-size: large;
+        }
+
+        &__text-area {
+            resize: none;
+            font-size: x-large;
+            border-radius: 5px;
+            border-color: aqua;
+        }
+    }
+}
+
+.reproduce-title {
+    text-align: center;
+}
+
+.reproduce {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        font-size: large;
+    }
+
+    &__board {
+        border: 1px solid black;
+        height: 100px;
+        width: 800px;
+        background-color: black;
+    }
+}
