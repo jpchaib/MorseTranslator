@@ -1,4 +1,4 @@
-import { morseAlphabet, alphabetMorse } from "./morseData.mjs";
+import { fromMorseToText, fromTextToMorse, morseRegex } from "./logic.mjs";
 
 const getInput = document.getElementById("input");
 const getOutput = document.getElementById("output");
@@ -27,7 +27,6 @@ const getOption = document.getElementById("select");
 getOption.addEventListener("change", reflex);
 
 //Translate Button
-const morseRegex = /^[.-]{1,6}(?:[ ]+[.-]{1,6})*(?:[ ]\/[ ]+[.-]{1,6}(?:[ ]+[.-]{1,6})*)*$/;
 
 const translate = (event) => {
     switch (getOption.value) {
@@ -43,35 +42,6 @@ const translate = (event) => {
         default:
             window.alert("Select an Option");
     }
-};
-
-const fromMorseToText = (text) => {
-    if (!text.match(morseRegex)) {
-        window.alert("Check your morse code for errors");
-    }
-    const output = text
-        .split(" ")
-        .map((char) => {
-            return alphabetMorse.get(char);
-        })
-        .join("");
-
-    getOutput.value = output;
-};
-
-const fromTextToMorse = (text) => {
-    if (text.match(morseRegex)) {
-        window.alert("Input is not appropriate");
-    }
-    const output = text
-        .split("")
-        .map((char) => {
-            return morseAlphabet.get(char.toUpperCase());
-        })
-        .join(" ")
-        .replace("/ /", " ");
-
-    getOutput.value = output;
 };
 
 const autoDetect = (text) => {
