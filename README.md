@@ -1,2 +1,2 @@
 # MorseTranslator
-This is a English/Morse Code translator
+This is an English/Morse Code translator
