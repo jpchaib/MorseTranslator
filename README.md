@@ -8,7 +8,7 @@ To get started with this project, clone the repository and install the dependenc
 
 `git clone https://github.com/jpchaib/MorseTranslator.git`
 
-`cd morse-translator`
+`cd MorseTranslator`
 
 `npm install`
 
